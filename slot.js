@@ -51,12 +51,12 @@ const betAmount = () => {
     while(true){
         if (minOrMax == '1'){
             depositAmount -= 50
-            console.log(`Money: ${depositAmount}`)
+            console.log(`Current Balance: ${depositAmount}`)
             break
 
         }else if (minOrMax == '2'){
             depositAmount -= 10
-            console.log(`Money: ${depositAmount}`)
+            console.log(`Current Balance: ${depositAmount}`)
             break
         }else{
             console.log('Invalid Option')
@@ -70,48 +70,57 @@ const minMax = betAmount()
 
 // display slot machine
 
+
+
 const reels = [
     ['🍒', '🍋', '🍊'],
     ['🔔', '💰', '🍒'],
     ['🍋', '🍊', '🔔'],
 ];
 
-const slotDisplay = () => {
+// const slotDisplay = () => {
     
 
-    for(let o = 0; o < 3 ;o++){
-        rowDisplay = ""
-        for(let i = 0; i < 3; i++){
-            rowDisplay += reels[o][i] + " "
-        }
-        console.log(rowDisplay)
-    }
-}
+//     for(let o = 0; o < 3 ;o++){
+//         rowDisplay = ""
+//         for(let i = 0; i < 3; i++){
+//             rowDisplay += reels[o][i] + " "
+//         }
+//         console.log(rowDisplay)
+//     }
+// }
 
-slotDisplay()
+// slotDisplay()
+
+// RNG generator for slotRandom 
+
+const RNG = () => {
+    return Math.floor(Math.random() * (2 - 0) + 0)
+ }
 
 
 // Spin machine / randomize 
 
 const slotRandom = () => {
 
+   
     for(let o = 0; o < 3 ;o++){
         rowDisplay = ""
         for(let i = 0; i < 3; i++){
-            rowDisplay += reels[o][i] + " "
+            const outer = RNG()
+            const inner = RNG()
+            rowDisplay += reels[outer][inner] + " "
         }
         console.log(rowDisplay)
     }
-
+    console.log(`Current Balance: ${depositAmount}`)
 }
 
 slotRandom()
 
+// Win conditions 
 
-const RNG = (outer,inner) => {
-   outer = Math.random() * (2 - 0) + 0
-   
-   inner = Math.random() * (2 - 0) + 0
-
-
+const winConditions = () => {
+    if()
 }
+ 
