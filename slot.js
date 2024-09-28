@@ -7,6 +7,8 @@
 // 6. Award winnings / take bet
 // 7. play again button
 
+
+// https://www.youtube.com/watch?v=E3XxeE7NF30&t=335s watches this video from inspiration. only watched to the 15 min mark. wanted to code the rest out my self
 const prompt = require("prompt-sync")();
 
 // step one deposit
@@ -111,6 +113,7 @@ const playAgain = () => {
     const answer = prompt('Would you like to play again? Y OR N ')
     return (answer.toUpperCase() == 'Y')
 }
+// help from mentor
 
 let depositAmount = deposit()
 do{
